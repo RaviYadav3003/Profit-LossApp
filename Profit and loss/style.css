@@ -9,8 +9,9 @@
 label {
   margin: 1rem;
   font-size: x-large;
+  font-weight: bold;
 }
-.inprice {
+input {
   padding: 0.5rem;
   border: 2px solid purple;
   border-radius: 12px;
@@ -27,4 +28,5 @@ label {
 }
 .btn:hover {
   background-color: cadetblue;
+  font-weight: bold;
 }
