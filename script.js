@@ -20,20 +20,17 @@ function onBtnClicked() {
     var resultToPrint = `Your Loss is ${lossTotal} & Loss Percent is ${lossPercentage}%`;
     // console.log(ResultValue);
   } else if (currentPriceValue > initialPriceValue) {
-    console.log("elseif");
+    // console.log("elseif");
     var profitValue = currentPriceValue - initialPriceValue;
     var profitTotal = profitValue * qtyStockValue;
     var profitPercentage = (profitValue / currentPriceValue) * 100;
 
     resultToPrint = `Your Profit is ${profitTotal} & Profit Percent is ${profitPercentage}%`;
     console.log(ResultValue);
-  }else if (initialPriceValue || qtyStockValue || currentPriceValue <= 0){
-    console.log("first if");
-    resultToPrint = "Please enter vaild value"
   }else {
-    resultToPrint = "Please Wait For the Market to Move";
+    resultToPrint = "Enter vaild number";
   }
-  //   console.log("outside", ResultValue);
+    // console.log("outside", ResultValue);
   ResultValue.innerText = resultToPrint;
 }
 
