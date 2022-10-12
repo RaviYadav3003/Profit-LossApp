@@ -11,10 +11,9 @@ function onBtnClicked() {
   //   console.log(initialPriceValue);
   //   console.log(qtyStockValue);
   //   console.log(currentPriceValue);
-
+  
   if (initialPriceValue > currentPriceValue) {
     console.log("if");
-
     var lossValue = initialPriceValue - currentPriceValue;
     var lossTotal = lossValue * qtyStockValue;
     var lossPercentage = (lossValue / initialPriceValue) * 100;
@@ -28,8 +27,11 @@ function onBtnClicked() {
 
     resultToPrint = `Your Profit is ${profitTotal} & Profit Percent is ${profitPercentage}%`;
     console.log(ResultValue);
-  } else {
-    ResultValue = "Please Wait For the Market to Move";
+  }else if (initialPriceValue || qtyStockValue || currentPriceValue <= 0){
+    console.log("first if");
+    resultToPrint = "Please enter vaild value"
+  }else {
+    resultToPrint = "Please Wait For the Market to Move";
   }
   //   console.log("outside", ResultValue);
   ResultValue.innerText = resultToPrint;
